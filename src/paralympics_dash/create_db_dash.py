@@ -69,15 +69,15 @@ def create_db():
     # 6. Import data from CSV to database table using pandas
     # Read the noc_regions data to a pandas dataframe
     na_values = ["", ]
-    noc_file = Path(__file__).parent.parent.parent.joinpath("data", "noc_regions.csv")
+    noc_file = Path(__file__).parent.parent.joinpath("data", "noc_regions.csv")
     noc_regions_df = pd.read_csv(noc_file, keep_default_na=False, na_values=na_values)
 
     # Read the paralympics event data to a pandas dataframe
-    event_file = Path(__file__).parent.parent.parent.joinpath("data", "paralympic_events.csv")
+    event_file = Path(__file__).parent.parent.joinpath("data", "paralympic_events.csv")
     paralympics_df = pd.read_csv(event_file)
 
     # Read the locations data to a pandas dataframe
-    loc_file = Path(__file__).parent.parent.parent.joinpath("data", "latlon.csv")
+    loc_file = Path(__file__).parent.parent.joinpath("data", "latlon.csv")
     loc_df = pd.read_csv(loc_file)
 
     # 7. Write the pandas DataFrame contents to the database tables

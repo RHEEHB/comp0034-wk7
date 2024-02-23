@@ -94,7 +94,7 @@ def add_data(db):
     first_region = db.session.execute(db.select(Region)).first()
     if not first_region:
         print("Start adding region data to the database")
-        region_file = Path(__file__).parent.parent.parent.joinpath("data", "noc_regions.csv")
+        region_file = Path(__file__).parent.parent.joinpath("data", "noc_regions.csv")
         # Read the noc_regions data to a pandas dataframe
         na_values = [""]
         regions_df = pd.read_csv(region_file, keep_default_na=False, na_values=na_values)
@@ -105,7 +105,7 @@ def add_data(db):
     first_event = db.session.execute(db.select(Event)).first()
     if not first_event:
         # Read the paralympics event data to a pandas dataframe
-        event_file = Path(__file__).parent.parent.parent.joinpath("data", "paralympic_events.csv")
+        event_file = Path(__file__).parent.parent.joinpath("data", "paralympic_events.csv")
         events_df = pd.read_csv(event_file)
 
         # Write the pandas DataFrame contents to the database tables
